@@ -6,6 +6,8 @@
 
 > 🌀 Parcel plugin that enables Google App Script bundling.
 
+_This is the plugin for Parcel v2. The plugin for the first version can be found [here](https://github.com/VladimirMikulic/parcel-plugin-gas)._
+
 ## :package: Installation
 
 ```shell
@@ -15,12 +17,16 @@ npm i parcel-optimizer-gas -D
 
 ## 🔌 Configuration
 
-We need to create `.parcelrc` configuration file and add the plugin to reporters like this:
+We need to create `.parcelrc` configuration file and add the plugin to optimizers like this:
+
+> Syntax "..." instructs Parcel to apply the plugin on top of existing JS optimizations
 
 ```js
 {
   "extends": "@parcel/config-default",
-  "reporters": ["...", "parcel-reporter-gas-imports"]
+  "optimizers": {
+    "*.js": ["...", "parcel-optimizer-gas"]
+  }
 }
 ```
 
