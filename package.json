@@ -1,0 +1,19 @@
+{
+  "name": "parcel-optimizer-gas",
+  "version": "1.0.0",
+  "description": "Parcel plugin that enables Google App Script bundling.",
+  "main": "lib/index.js",
+  "engines": {
+    "parcel": "2.0.0-beta.2"
+  },
+  "keywords": [
+    "gas",
+    "google apps script"
+  ],
+  "author": "Vladimir Mikulic",
+  "license": "MIT",
+  "dependencies": {
+    "gas-entry-generator": "^2.1.0",
+    "parcel": "^2.0.0-beta.2"
+  }
+}
