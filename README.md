@@ -39,9 +39,10 @@ i.e. `onInstall` becomes `j`. This is a problem since Google's runtime expects e
 `onInstall` method to be available in global scope. This applies to other methods as well.
 That's why default Parcel bundle doesn't work on Google's runtime environment.
 
-By attaching methods to the `global` entity in source code, you prevent
-uglifying and with a bit of the plugin's magic your code works on Google's
-runtime environment.
+By attaching methods to the
+[`globalThis`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis)
+in source code, you prevent uglifying and with a bit of the plugin's magic your
+code works on Google's runtime environment.
 
 ### 🏠 Single file
 
@@ -49,12 +50,12 @@ runtime environment.
 
 ```js
 // Runs when user installs extension
-global.onInstall = e => {
+globalThis.onInstall = e => {
   onOpen();
 };
 
 // Runs as soon as user opens a document
-global.onOpen = e => {
+globalThis.onOpen = e => {
   DocumentApp.getUi() // Or SlidesApp or FormApp.
     .createMenu('My Add-on')
     .addItem('Open', 'showSidebar')
@@ -74,7 +75,7 @@ global scope/namespace.
 require('./my-module');
 
 // Runs when user installs extension
-global.onInstall = e => {
+globalThis.onInstall = e => {
   customFunction();
 };
 ```
@@ -82,7 +83,7 @@ global.onInstall = e => {
 **my-module.js**
 
 ```js
-global.customFunction = () => {
+globalThis.customFunction = () => {
   console.log('Hello from Google App Script!');
 };
 ```
