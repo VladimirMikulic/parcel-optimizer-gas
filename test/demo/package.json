@@ -1,0 +1,15 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "engines": {
+    "parcel": ">=2.0.0"
+  },
+  "author": "Vladimir Mikulic",
+  "license": "MIT",
+  "peerDependencies": {
+    "parcel": ">=2.0.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.9.1"
+  }
+}
