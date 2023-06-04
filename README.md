@@ -2,7 +2,7 @@
 
 ![Version](https://img.shields.io/npm/v/parcel-optimizer-gas)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)
-[![CI](https://github.com/VladimirMikulic/parcel-optimizer-gas/actions/workflows/ci.yml/badge.svg)](https://github.com/VladimirMikulic/parcel-optimizer-gas/actions)
+[![CI](https://github.com/VladimirMikulic/parcel-optimizer-gas/actions/workflows/CI.yml/badge.svg)](https://github.com/VladimirMikulic/parcel-optimizer-gas/actions)
 [![Twitter: VladoDev](https://img.shields.io/twitter/follow/VladoDev.svg?style=social)](https://twitter.com/VladoDev)
 
 > 🌀 Parcel plugin that enables Google App Script bundling.
